@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import 'semantic-ui-css/semantic.min.css';
+import { Route, Routes } from 'react-router-dom';
+import LoginForm from './LoginForm';
+import SignupForm from './SignupForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes className="App">
+      <Route path="/" element={<LoginForm />} />
+      <Route path="/signup" element={<SignupForm />} />
+    </Routes>,
+
+      <footer className="footer">
+        <p>&copy; 2023 Pro-Path</p>
+      </footer>
   );
 }
 
